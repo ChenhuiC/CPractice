@@ -148,6 +148,7 @@ void PrintList(ListNode *head)
     printf("\r\n");
 }
 
+#ifdef DEBUG
 int main(void)
 {
     printf("Enter into %s\r\n", __func__);
@@ -162,3 +163,4 @@ int main(void)
 
     return 0;
 }
+#endif

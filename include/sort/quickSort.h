@@ -1,14 +1,14 @@
 /**
-* @file: shuffleArray.h
+* @file: quickSort.h
 * @brief: 
 * @author: chenhui
-* @created: 2023-07-11 22:46:28
+* @created: 2023-07-25 23:27:22
 * 
-* @copyright (C), 2008-2023
+* @copyright (C), 2008-2023, 浙江德施曼科技智能股份有限公司
 * 
 */
-#ifndef __SHUFFLEARRAY_H__
-#define __SHUFFLEARRAY_H__
+#ifndef __QUICKSORT_H__
+#define __QUICKSORT_H__
 
 #ifdef __cplusplus
 extern "C"
@@ -20,11 +20,6 @@ extern "C"
 /* export types --------------------------------------------------------------*/
 /* export variables ----------------------------------------------------------*/
 /* export functions ----------------------------------------------------------*/
-/* swap element in array */
-void SwapElement(int array[], int first, int second);
-/* shuffle array */
-void ShuffleArray(int array[], int length);
-
 
 #ifdef __cplusplus
 }

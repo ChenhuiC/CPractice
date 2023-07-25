@@ -3,12 +3,16 @@ project(demo)
 
 include_directories(include)
 
-# 获取目录下所有的.C文件存入files里
-file(GLOB files *.c)
+# 获取当前目录及其子目录下的所有c文件存入files里
+file(GLOB files ${CMAKE_SOURCE_DIR}/*.c ${CMAKE_SOURCE_DIR}/src/*.c ${CMAKE_SOURCE_DIR}/src/sort/*.c)
 
+# 添加子目录
+# add_subdirectory(src)
 
 add_executable(demo ${files})
-
+foreach (file ${files})
+    message(${file})
+endforeach ()
 
 # 遍历files把它们添加成可执行程序
 # foreach (file ${files})

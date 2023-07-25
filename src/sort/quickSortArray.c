@@ -1,5 +1,5 @@
 /**
- * @file quickSort.c
+ * @file quickSortArray.c
  * @author Chanhuni
  * @brief 快速排序
  *          采用分而治之的思想(分治法)，即找一个点 pivot 把数组分为两部分，每趟排序过程只解决一个问题，
@@ -11,17 +11,17 @@
  * @copyright Copyright (c) 2023
  * 
  */
-#include "include/io_utils.h"
-#include "shuffleArray.h"
+#include "../include/io_utils.h"
+#include "sort/shuffleArray.h"
 
 
 /**
  * @brief 对数组元素进行切分，返回切分点
  * 
- * @param array 
- * @param low 
- * @param high 
- * @return int 
+ * @param array  数组名 
+ * @param low    最低下标
+ * @param high   最高下标
+ * @return int   返回切分点
  */
 int Partition(int array[], int low, int high)
 {
@@ -39,11 +39,11 @@ int Partition(int array[], int low, int high)
 /**
  * @brief 
  * 
- * @param array 
- * @param low 
- * @param high 
+ * @param array 数组名
+ * @param low   最低下标
+ * @param high  最高下标
  */
-void QuickSort(int array[], int low, int high)
+void QuickSortArray(int array[], int low, int high)
 {
     if(low >= high){
         return;
@@ -53,6 +53,9 @@ void QuickSort(int array[], int low, int high)
     QuickSort(array, partition + 1, high);
 }
 
+#define DEBUG (0)
+/*测试*/
+#if DEBUG
 #define SIZE 50
 int main(void)
 {
@@ -65,7 +68,8 @@ int main(void)
     ShuffleArray(players, SIZE);
     PRINT_INT_ARRAY(players, SIZE);
     puts("");
-    QuickSort(players, 0, SIZE - 1);
+    QuickSortArray(players, 0, SIZE - 1);
     PRINT_INT_ARRAY(players, SIZE);
     return 0;
 }
+#endif

@@ -13,7 +13,7 @@
 #include <string.h>
 
 
-#define BASE64_DEBUG  1
+#define BASE64_DEBUG  0
 
 const char * base64char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 

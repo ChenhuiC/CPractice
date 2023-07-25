@@ -1,5 +1,5 @@
 /**
-* @file: quickSort.h
+* @file: quickSortArray.h
 * @brief: 
 * @author: chenhui
 * @created: 2023-07-11 23:19:02
@@ -21,7 +21,7 @@ extern "C"
 /* export variables ----------------------------------------------------------*/
 /* export functions ----------------------------------------------------------*/
 
-void QuickSort(int array[], int low, int high);
+void QuickSortArray(int array[], int low, int high);
 
 #ifdef __cplusplus
 }
